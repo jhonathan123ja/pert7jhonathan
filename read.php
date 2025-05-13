@@ -62,7 +62,6 @@
         <th scope="col">NIM</th>
         <th scope="col">Nama</th>
         <th scope="col">Gender</th>
-        <th scope="col">Jabatan</th>
         <th scope="col">Email</th>
         <th scope="col">Ponsel</th>
         <th scope="col">Foto</th>
@@ -73,16 +72,15 @@
       <?php
       include('koneksi.php');
       $username=$_SESSION['username'];
-      $sql = "select * from dosen where username='$username'";
+      $sql = "select * from data_mahasiswa where username='$username'";
       $result = $conn->query($sql);
       while ($data = $result->fetch_assoc()) {
       ?>
 
         <tr>
-          <td><?php echo $data['nidn'] ?></td>
+          <td><?php echo $data['nim'] ?></td>
           <td><?php echo $data['nama'] ?></td>
           <td><?php echo $data['gender'] ?></td>
-          <td><?php echo $data['jabatan'] ?></td>
           <td><?php echo $data['email'] ?></td>
           <td><?php echo $data['ponsel'] ?></td>
           <td>
@@ -91,8 +89,8 @@
           </td>
           <td>
             <!-- untuk memfokuskan ke nim -->
-            <a href="edit.php?nidn=<?= $data['nidn'] ?>"><button type="button" class="btn btn-warning">Edit</button></a>
-            <a href="delete.php?nidn=<?= $data['nidn'] ?> " onclick="return confirm ('Yakin Nih?')"><button type="button" class="btn btn-danger">Delete</button></a>
+            <a href="edit.php?nim=<?= $data['nim'] ?>"><button type="button" class="btn btn-warning">Edit</button></a>
+            <a href="delete.php?nim=<?= $data['nim'] ?> " onclick="return confirm ('Yakin Nih?')"><button type="button" class="btn btn-danger">Delete</button></a>
           </td>
         </tr>
       <?php

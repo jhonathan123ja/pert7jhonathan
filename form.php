@@ -55,9 +55,9 @@
            
             <form action="save.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3 row">
-                    <label for="nidn" class="col-sm-2 col-form-label">NIDN</label>
+                    <label for="nim" class="col-sm-2 col-form-label">NIM</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nidn" name="nidn">
+                        <input type="text" class="form-control" id="nim" name="nim">
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -71,21 +71,8 @@
                     <div class="col-sm-10">
                     <select name="gender" class="form-select" aria-label="Default select example">
                         <option selected>Pilih jenis kelamin</option>
-                        <option value="Laki-laki">Laki-laki</option>
-                        <option value="Perempuan">Perempuan</option>
-                    </select>
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
-                    <div class="col-sm-10">
-                    <select name="jabatan" class="form-select" aria-label="Default select example">
-                        <option selected>Pilih jabatan</option>
-                        <option value="Rektor">Rektor</option>
-                        <option value="Wakil Rektor">Wakil Rektor</option>
-                        <option value="Dekan">Dekan</option>
-                        <option value="Kaprodi">Kaprodi</option>
-                        <option value="Dosen">Dosen</option>
+                        <option value="1">Laki-laki</option>
+                        <option value="2">Perempuan</option>
                     </select>
                     </div>
                 </div>
